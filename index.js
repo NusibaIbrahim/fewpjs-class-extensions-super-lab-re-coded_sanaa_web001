@@ -25,3 +25,18 @@ let oak = new Deciduous("Oak", "Professor");
 oak.species;
 oak.name;
 Deciduous.definition();
+
+
+class Evergreen extends Tree {
+  constructor(species, name) {
+    super(species);
+    this.name = name;
+  }
+  static definition() {
+    return `${super.definition()} Evergreens keep their leaves all year round.`;
+  }
+}
+let fir = new Evergreen("Fir", "Douglas");
+fir.species;
+fir.name;
+Evergreen.definition();
